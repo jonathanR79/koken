@@ -1,0 +1,23 @@
+ <p>
+<koken:exif>
+  <koken:not empty="exif.make">
+    <strong>Camera:</strong> {{ exif.make }}
+  </koken:not>  
+  <koken:not empty="exif.model">
+    {{ exif.model }}<br>
+  </koken:not>
+  <koken:not empty="exif.lens">
+    <strong>Lens:</strong> {{ exif.lens }}
+  </koken:not>
+<br>
+  <koken:not empty="exif.aperture">
+    <strong>Aperture:</strong> <span class="fstop">f</span>/{{ exif.aperture.computed }}
+  </koken:not>
+  <koken:not empty="exif.exposure">
+    <strong>Exposure:</strong> {{ exif.exposure }}
+  </koken:not>
+    <koken:not empty="exif.iso_speed_ratings">
+    <strong>ISO:</strong> {{ exif.iso_speed_ratings.computed }}
+  </koken:not>
+</koken:exif>
+</p>
