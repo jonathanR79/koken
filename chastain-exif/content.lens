@@ -64,7 +64,9 @@
 			<span class="img-caption">
 				<h4>{{ content.title }}</h4>
 				{{ content.caption paragraphs="true" }}
-				<koken:include file="inc/exif.html" />
+				<koken:if true="settings.show_exif">
+					<koken:include file="inc/exif.html" />
+				</koken:if>		
 			</span>
 
 
